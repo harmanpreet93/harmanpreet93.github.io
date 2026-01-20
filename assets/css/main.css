@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap");
 @import url("font-awesome.min.css");
 
 /*
@@ -57,18 +57,58 @@
 
 /* Basic */
 
+	:root {
+		--bg: #f6f5f2;
+		--text: #141414;
+		--muted: #5f5f5f;
+		--border: #d7d4cd;
+	}
+
+	/* Dark theme */
+	[data-theme="dark"] {
+		--bg: #1a1a1a;
+		--text: #e8e8e8;
+		--muted: #a0a0a0;
+		--border: #3a3a3a;
+	}
+
+	/* Light theme */
+	[data-theme="light"] {
+		--bg: #f6f5f2;
+		--text: #141414;
+		--muted: #5f5f5f;
+		--border: #d7d4cd;
+	}
+
+	/* System preference (default) */
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme]) {
+			--bg: #1a1a1a;
+			--text: #e8e8e8;
+			--muted: #a0a0a0;
+			--border: #3a3a3a;
+		}
+	}
+
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5em;
+	}
+
 	body, input, select, textarea {
-		color: #fff;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 15pt;
-		font-weight: 300 !important;
-		letter-spacing: -0.025em;
-		line-height: 1.75em;
+		color: var(--text);
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 16px;
+		font-weight: 400 !important;
+		letter-spacing: 0;
+		line-height: 1.6em;
 	}
 
 	body {
-		background: #fff;
+		background: var(--bg);
 		overflow: auto;
+		padding-top: 4.5em;
+		scroll-behavior: smooth;
 	}
 
 		body.loading * {
@@ -79,11 +119,7 @@
 		}
 
 	a {
-		-moz-transition: border-color 0.2s ease-in-out;
-		-webkit-transition: border-color 0.2s ease-in-out;
-		-ms-transition: border-color 0.2s ease-in-out;
-		transition: border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		border-bottom: solid 1px var(--border);
 		color: inherit;
 		outline: 0;
 		text-decoration: none;
@@ -198,8 +234,8 @@
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/bg.jpg") bottom left;
-		background-repeat: repeat-x;
+		background: #348cb2;
+		background-image: none;
 		height: 100%;
 		left: 0;
 		opacity: 1;
@@ -498,32 +534,33 @@
 	}
 
 	#header {
-		-moz-animation: header 1s 2.25s forwards;
-		-webkit-animation: header 1s 2.25s forwards;
-		-ms-animation: header 1s 2.25s forwards;
-		animation: header 1s 2.25s forwards;
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
 		backface-visibility: hidden;
-		-moz-transform: translate3d(0,0,0);
-		-webkit-transform: translate3d(0,0,0);
-		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
 		cursor: default;
 		display: block;
-		opacity: 0;
+		opacity: 1 !important;
 		position: relative;
 		text-align: left;
-		top: -1em;
+		top: 0 !important;
 		vertical-align: middle;
 		width: 90%;
 		max-width: 880px;
-		margin: 0 auto;
+		margin: 0.25em auto 0 auto;
+		padding-top: 0.25em;
 	}
 
 		#header h1 {
-			font-size: 4.35em;
+			font-size: 2.436em;
 			font-weight: 900;
 			letter-spacing: -0.035em;
 			line-height: 1em;
@@ -550,22 +587,22 @@
 		}
 
 			#header nav li {
-				-moz-animation: nav-icons 0.5s ease-in-out forwards;
-				-webkit-animation: nav-icons 0.5s ease-in-out forwards;
-				-ms-animation: nav-icons 0.5s ease-in-out forwards;
-				animation: nav-icons 0.5s ease-in-out forwards;
+				-moz-animation: none !important;
+				-webkit-animation: none !important;
+				-ms-animation: none !important;
+				animation: none !important;
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
 				backface-visibility: hidden;
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
+				-moz-transform: none !important;
+				-webkit-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
 				display: inline-block;
 				height: 3.25em;
 				line-height: 3.25em;
-				opacity: 0;
+				opacity: 1 !important;
 				position: relative;
 				top: 0;
 				width: 3.25em;
@@ -654,7 +691,7 @@
 				-ms-transition: all 0.2s ease-in-out;
 				transition: all 0.2s ease-in-out;
 				border-radius: 100%;
-				border: solid 1px #fff;
+				border: solid 1px var(--border);
 				display: block;
 				font-size: 1.25em;
 				height: 2.3em;
@@ -663,6 +700,7 @@
 				text-align: center;
 				top: 0;
 				width: 2.3em;
+				color: var(--text);
 			}
 
 				#header nav a:hover {
@@ -670,8 +708,8 @@
 				}
 
 					#header nav a:hover:before {
-						background-color: rgba(255, 255, 255, 0.175);
-						color: #fff;
+						background-color: var(--border);
+						color: var(--text);
 					}
 
 				#header nav a:active {
@@ -680,13 +718,84 @@
 				}
 
 					#header nav a:active:before {
-						background-color: rgba(255, 255, 255, 0.35);
-						color: #fff;
+						background-color: var(--border);
+						color: var(--text);
 					}
 
 				#header nav a span {
 					display: none;
 				}
+
+/* Top Navigation */
+
+	#top-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background: var(--bg);
+		border-bottom: 1px solid var(--border);
+		z-index: 1000;
+		padding: 1em 0;
+		text-align: center;
+	}
+
+		#top-nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 2em;
+		}
+
+		#top-nav li {
+			margin: 0;
+			padding: 0;
+		}
+
+		#top-nav a {
+			color: var(--text);
+			text-decoration: none;
+			font-size: 0.95em;
+			font-weight: 500;
+			border-bottom: none;
+			opacity: 0.75;
+			transition: opacity 0.2s ease;
+		}
+
+		#top-nav a:hover {
+			opacity: 1;
+			border-bottom: none;
+		}
+
+		#top-nav button {
+			background: none;
+			border: none;
+			color: var(--text);
+			cursor: pointer;
+			font-size: 1em;
+			padding: 0;
+			margin: 0;
+			opacity: 0.75;
+			transition: opacity 0.2s ease;
+			line-height: 1;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#top-nav button:hover {
+			opacity: 1;
+		}
+
+		#top-nav button svg {
+			width: 1em;
+			height: 1em;
+			vertical-align: middle;
+		}
 
 	.content {
 		width: 90%;
@@ -712,6 +821,12 @@
 		margin-bottom: 0.2em;
 	}
 
+	.patent-number {
+		font-weight: 700;
+		margin-right: 0.5em;
+		color: var(--text);
+	}
+
 	.section .meta {
 		font-size: 0.95em;
 		opacity: 0.75;
@@ -720,6 +835,36 @@
 
 	.section .item + .item {
 		margin-top: 1.1em;
+	}
+
+	/* Research papers (global) */
+
+	.paper {
+		margin: 0;
+		color: var(--text);
+		line-height: 1.6;
+	}
+
+	.paper + .paper {
+		margin-top: 1.1em;
+	}
+
+	.paper-authors {
+		font-size: 0.95em;
+		margin: 0 0 0.3em 0;
+		color: var(--muted);
+		line-height: 1.5;
+	}
+
+	.paper-authors em {
+		font-style: italic;
+	}
+
+	.paper-award {
+		font-size: 0.9em;
+		margin: 0.2em 0 0 0;
+		color: var(--muted);
+		font-style: italic;
 	}
 
 	.bullets {
@@ -1041,6 +1186,194 @@
 					transform: translate3d(-412.5px,0,0);
 				}
 
+	}
+
+/* Minimal refresh overrides */
+
+	* {
+		animation: none !important;
+		transition: none !important;
+	}
+
+	#bg,
+	#overlay {
+		display: none;
+	}
+
+	#wrapper,
+	#header,
+	#header nav li {
+		opacity: 1;
+		animation: none !important;
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		transform: none;
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+	}
+
+	#wrapper {
+		animation: none;
+		-moz-animation: none;
+		-webkit-animation: none;
+		-ms-animation: none;
+		opacity: 1;
+	}
+
+	#header,
+	#header * {
+		animation: none !important;
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		transition: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+	}
+
+	#header {
+		top: 0;
+		margin-top: 0.25em;
+		padding-top: 0.25em;
+		max-width: 720px;
+		opacity: 1 !important;
+		transform: none !important;
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+	}
+
+	#main {
+		padding-top: 2em;
+	}
+
+	#header h1 {
+		font-size: 1.456em;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+	}
+
+	#header p {
+		font-size: 1em;
+		opacity: 0.85;
+	}
+
+	#header nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75em;
+	}
+
+	#header nav li {
+		width: auto;
+		height: auto;
+		line-height: 1;
+		margin: 0;
+	}
+
+	#header nav a:before {
+		border: 0;
+		width: auto;
+		height: auto;
+		line-height: 1;
+		font-size: 1.1em;
+		color: var(--text);
+	}
+
+	#header nav a:hover,
+	#header nav a:active {
+		font-size: 1em;
+	}
+
+	#header nav a:hover:before,
+	#header nav a:active:before {
+		background: none;
+		color: var(--text);
+	}
+
+	#top-nav {
+		padding: 0.75em 0;
+	}
+
+		#top-nav ul {
+			gap: 1.1em;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+			justify-content: flex-start;
+			width: 100%;
+			padding: 0 1em;
+		}
+
+		#top-nav a {
+			font-size: 0.85em;
+		}
+
+	.content {
+		max-width: 720px;
+		margin: 2em auto 4em;
+	}
+
+	.section {
+		margin: 2em 0;
+	}
+
+	.section h2 {
+		font-size: 1.4em;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+
+	.section h3 {
+		font-size: 1.05em;
+		font-weight: 500;
+	}
+
+	.section .meta {
+		color: var(--muted);
+		opacity: 1;
+	}
+
+	.section .description {
+		color: var(--muted);
+		font-size: 0.95em;
+		margin: 0.35em 0 0 0;
+	}
+
+	.paper-title {
+		font-size: 1.1em;
+		font-weight: 600;
+		margin: 0 0 0.5em 0;
+		color: var(--text);
+		line-height: 1.4;
+	}
+
+	.paper-number {
+		font-weight: 700;
+		margin-right: 0.5em;
+		color: var(--text);
+	}
+
+	.paper-authors {
+		font-size: 0.95em;
+		margin: 0 0 0.3em 0;
+		color: var(--muted);
+		line-height: 1.5;
+	}
+
+	.paper-authors em {
+		font-style: italic;
+	}
+
+	.paper-award {
+		font-size: 0.9em;
+		margin: 0.2em 0 0 0;
+		color: var(--muted);
+		font-style: italic;
 	}
 
 		@-webkit-keyframes bg {
