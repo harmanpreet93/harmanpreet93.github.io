@@ -13,40 +13,162 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
-	<body class="loading">
+	<body>
+		<nav id="top-nav">
+			<ul>
+				<li><a href="#header">Home</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#research">Research</a></li>
+				<li><a href="#patents">Patents</a></li>
+				<li><a href="#outside-work">Outside Work</a></li>
+				<li><button id="theme-toggle" aria-label="Toggle theme" class="icon">
+					<svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path id="theme-icon-path" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+					</svg>
+				</button></li>
+			</ul>
+		</nav>
 		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
 			<div id="main">
 
 				<!-- Header -->
 					<header id="header">
 						<!-- <span class="avatar"><img src="assets/css/images/avatar.jpg" alt="" /></span> -->
 						<h1>Harmanpreet Singh</h1>
-						<p>Machine Learning Scientist <br> Computer Science/Machine Learning, University of Montreal/Mila &nbsp;&bull;&nbsp; CSE Graduate, IIT Hyderabad</p>
-						<nav>
+						<p class="roles">AI/ML Research Scientist &middot; Creative Artist</p>
+						<p class="thesis">I build edge AI systems using small LLMs for personalization and multi-agent applications under real production constraints.</p>
+						<p class="thesis">Curious about art, music, and generative media.</p>
+						<nav class="social">
 							<ul>
-								<li><a target="_blank" href="https://in.linkedin.com/in/singhharmanpreet93" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-								<li><a target="_blank" href="https://github.com/harmanpreet93" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a target="_blank" href="https://stackoverflow.com/users/3711601/harman" class="icon fa-stack-overflow"><span class="label">Github</span></a></li>
-								<li><a target="_blank" href="https://www.behance.net/singhharmanpreet" class="icon fa-behance"><span class="label">Behance</span></a></li>
-								<li><a target="_blank" href="https://twitter.com/Harmanpreet_93" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a target="_blank" href="https://www.instagram.com/harmxnpreet.singh" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<!-- <li><a target="_blank" href="https://www.facebook.com/singh.harmanpreet93" class="icon fa-facebook"><span class="label">Facebook</span></a></li> -->
-								<li><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=singh.harmanpreet93@gmail.com&su=Hi! I just checked out your website.&body=" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/singhharmanpreet93/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://www.instagram.com/singh.harmxn/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://github.com/harmanpreet93" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://x.com/Harmanpreet_93" class="icon fa-twitter"><span class="label">X</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://ca.pinterest.com/singhharman93/" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://open.spotify.com/user/singhharman" class="icon fa-spotify"><span class="label">Spotify</span></a></li>
+								<li><a href="mailto:singh.harmanpreet93@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 							</ul>
 						</nav>
 					</header>
+
+					<section class="content">
+						<div id="education" class="section">
+							<h2>Education</h2>
+							<div class="item">
+								<h3>Masters in AI/ML</h3>
+								<p class="meta"><a target="_blank" rel="noopener" href="https://mila.quebec/en/">MILA</a> / <a target="_blank" rel="noopener" href="https://www.umontreal.ca/en/">Université de Montréal</a>, <a target="_blank" rel="noopener" href="https://www.mcgill.ca/">McGill University</a></p>
+							</div>
+							<div class="item">
+								<h3>B.Tech Computer Science &amp; Engineering, Minor in Entrepreneurship</h3>
+								<p class="meta"><a target="_blank" rel="noopener" href="https://www.iith.ac.in/">IIT Hyderabad</a></p>
+							</div>
+						</div>
+
+						<div id="work" class="section">
+							<h2>Work</h2>
+							<div class="item">
+								<h3>AI Research Scientist</h3>
+								<p class="meta">LG AI Research, Toronto (2021–present)</p>
+								<p class="description">sLLMs, quantization, personalization, llm reasoning optimization.</p>
+							</div>
+							<div class="item">
+								<h3>Associate Researcher</h3>
+								<p class="meta">Huawei Noah's Ark Lab, Toronto (2020–2021)</p>
+								<p class="description">Deep imitative models and multi-agent planning for self-driving cars.</p>
+							</div>
+							<div class="item">
+								<h3>Machine Learning Intern</h3>
+								<p class="meta">Bose Corporation, Boston (2020)</p>
+								<p class="description">ML applications for noise cancellation in audio devices.</p>
+							</div>
+							<div class="item">
+								<h3>R&amp;D Engineer II</h3>
+								<p class="meta">Honeywell, Bengaluru (2016–2019)</p>
+								<p class="description">NLP and audio applications for aerospace industry.</p>
+							</div>
+						</div>
+
+						<div id="research" class="section">
+							<h2>Research</h2>
+							<div class="paper">
+								<h3 class="paper-title"><span class="paper-number">1.</span> GEMMAS - Graph-based Evaluation Metrics for Multi-Agent Systems</h3>
+								<p class="paper-authors">Lee, J., Chang, R., Kwon, D., Harmanpreet Singh, Verma, N. · <em>EMNLP 2025</em></p>
+							</div>
+							<div class="paper">
+								<h3 class="paper-title"><span class="paper-number">2.</span> SMaRT - Strategy Fusion for LLM Reasoning &amp; Planning</h3>
+								<p class="paper-authors">Verma, N., Bharadwaj, M., Jang, W., Harmanpreet Singh, Wang, Y., Fashandi, H., Lee, C. · <em>arXiv 2025</em></p>
+							</div>
+							<div class="paper">
+								<h3 class="paper-title"><span class="paper-number">3.</span> Personal Large Language Model Agents - Tailored Travel Planning</h3>
+								<p class="paper-authors">Harmanpreet Singh, Verma, N., Wang, Y., Bharadwaj, M., Fashandi, H., Ferreira, K., Lee, C. · <em>EMNLP 2024</em></p>
+							</div>
+							<div class="paper">
+								<h3 class="paper-title"><span class="paper-number">4.</span> Mind the Gap - Link Prediction Metrics &amp; Logic Rules</h3>
+								<p class="paper-authors">Harmanpreet Singh, Sequeira, R., Jia, S., Gazeau, M., Fashandi, H. · <em>Learning with Knowledge Graphs Workshop 2023</em></p>
+								<p class="paper-award">Best Paper Award</p>
+							</div>
+							<div class="paper">
+								<h3 class="paper-title"><span class="paper-number">5.</span> SmartHome - Procedural Learning Environment</h3>
+								<p class="paper-authors">Gazeau, M., Sequeira, R., Harmanpreet Singh · <em>RLDM 2022</em></p>
+							</div>
+						</div>
+
+						<div id="patents" class="section">
+							<h2>Patents</h2>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">1.</span> Edge-Based Intelligent Assistant Architectures - US Patent Application · 2025 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20250232122A1/en?inventor=harmanpreet+singh&assignee=lg&oq=harmanpreet+singh+lg">US20250232122A1</a></h3>
+								<p class="description">Architectures for AI-driven assistant systems operating in edge and resource-constrained environments.</p>
+							</div>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">2.</span> Context-Aware Reasoning for AI Models - US Patent Application · 2025 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20250209802A1/en?inventor=harmanpreet+singh&assignee=lg&oq=harmanpreet+singh+lg">US20250209802A1</a></h3>
+								<p class="description">Approaches for improving model reasoning using contextual user information and interaction history.</p>
+							</div>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">3.</span> AI Interaction Workflow Orchestration - US Patent Application · 2025 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20250077866A1/en?inventor=harmanpreet+singh&assignee=lg&oq=harmanpreet+singh+lg">US20250077866A1</a></h3>
+								<p class="description">Frameworks for managing and coordinating AI-driven interaction workflows across devices and services.</p>
+							</div>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">4.</span> AI-Based Personalization of Interactive Systems - US Patent Application · 2024 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20240232620A1/en?inventor=harmanpreet+singh&assignee=lg&oq=harmanpreet+singh+lg">US20240232620A1</a></h3>
+								<p class="description">Techniques for personalizing AI/ML system behavior based on user context and interaction signals.</p>
+							</div>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">5.</span> Systems and Methods for Natural Language Queries - US Patent · 2023 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US11829358B2/en">US11829358B2</a></h3>
+								<p class="description">Enables natural language querying to control, retrieve, and interact with device and system functionalities.</p>
+							</div>
+							<div class="item">
+								<h3 class="paper-title"><span class="patent-number">6.</span> Machine Learning Optimization for User-Facing Systems - US Patent Application · 2023 · <a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20230252990A1/en?inventor=harmanpreet+singh&assignee=lg&oq=harmanpreet+singh+lg">US20230252990A1</a></h3>
+								<p class="description">Methods for applying machine learning to optimize system responses and user interaction workflows.</p>
+							</div>
+						</div>
+
+						<div id="technical-focus" class="section">
+							<h2>Technical Focus</h2>
+							<p class="description">
+								Edge AI deployment through model compression and quantization. Multi-agent system evaluation and orchestration. LLM reasoning optimization under compute/latency constraints. Multimodal applications for production environments such as LLM personalization.
+							</p>
+						</div>
+
+						<div id="outside-work" class="section">
+							<h2>Outside Work</h2>
+							<ul class="bullets">
+								<li>Travel and experiences</li>
+								<li>Visual art &amp; AI-generated media</li>
+								<li>Videography &amp; short-form experiments</li>
+								<li>Music - listening, curation, playlists</li>
+								<li>Entrepreneurship</li>
+							</ul>
+						</div>
+					</section>
 
 			</div>
 		</div>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script>
-			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
-		
+
 		<script>
 			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -56,6 +178,65 @@
 			  ga('create', 'UA-69465765-2', 'auto');
 			  ga('send', 'pageview');
 
+		</script>
+
+		<script>
+			// Theme toggle functionality
+			(function() {
+				const themeToggle = document.getElementById('theme-toggle');
+				const html = document.documentElement;
+				
+				// Get saved theme or use system preference
+				const savedTheme = localStorage.getItem('theme');
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				
+				// Set initial theme
+				if (savedTheme) {
+					html.setAttribute('data-theme', savedTheme);
+					updateToggleIcon(savedTheme);
+				} else {
+					// Use system preference (no data-theme attribute)
+					updateToggleIcon(prefersDark ? 'dark' : 'light');
+				}
+				
+				// Theme toggle button click handler
+				themeToggle.addEventListener('click', function() {
+					const currentTheme = html.getAttribute('data-theme');
+					let newTheme;
+					
+					if (!currentTheme) {
+						// Currently using system preference, switch to opposite
+						newTheme = prefersDark ? 'light' : 'dark';
+					} else if (currentTheme === 'dark') {
+						newTheme = 'light';
+					} else {
+						newTheme = 'dark';
+					}
+					
+					html.setAttribute('data-theme', newTheme);
+					localStorage.setItem('theme', newTheme);
+					updateToggleIcon(newTheme);
+				});
+				
+				// Update toggle icon
+				function updateToggleIcon(theme) {
+					const themeIconPath = document.getElementById('theme-icon-path');
+					if (theme === 'dark') {
+						// Sun icon for dark mode (clicking will switch to light)
+						themeIconPath.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z');
+					} else {
+						// Moon icon for light mode (clicking will switch to dark)
+						themeIconPath.setAttribute('d', 'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z');
+					}
+				}
+				
+				// Listen for system theme changes (only if no manual preference)
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+					if (!localStorage.getItem('theme')) {
+						updateToggleIcon(e.matches ? 'dark' : 'light');
+					}
+				});
+			})();
 		</script>
 	</body>
 </html>
